@@ -200,4 +200,19 @@ fun main(){
     val sportCar1=SportCar("sportCar1",180,4)
 
     val listOfCars=arrayListOf(taxi1,taxi2,bus1,bus2,van1,van2,ambulance1,truck2,truck1,sportCar1)
+
+    listOfCars.sortByDescending{item ->item.speed }
+    println("Sort cars based on maximum speed")
+    for (cars in listOfCars){
+        println("${cars.name}'s speed is ${cars.speed}")
+    }
+    println("------------------------------------")
+    listOfCars.sortBy {item->item.capacity}
+    println("Sort cars based on minimum capacity")
+    for (cars in listOfCars){
+        println("${cars.name}'s capacity is ${cars.capacity}")
+    }
+
+
 }
+
