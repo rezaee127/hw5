@@ -42,3 +42,28 @@ fun decimalToBinary() {
     val s2 = s.reversed()
     println(s2)
 }
+
+fun binaryToDecimal() {
+    println("Enter a binary number")
+    var n = readLine()?.toLong()
+    var i = 1
+    var sum = 0L
+    var flag = true
+    if (n != null) {
+        while (n != 0L) {
+            val x = n % 10
+            if (x == 1L || x == 0L) {
+                sum += x * i
+                i *= 2
+                n /= 10
+            } else {
+                println("Entered number not binary")
+                flag = false
+                break
+            }
+        }
+    }
+    if (flag) {
+        println(sum)
+    }
+}
