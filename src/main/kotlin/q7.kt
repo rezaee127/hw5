@@ -29,3 +29,16 @@ fun main() {
         println("input invalid")
     }
 }
+fun decimalToBinary() {
+    println("Enter a decimal number")
+    var n = readLine()?.toLong()
+    var s = ""
+    if (n != null) {
+        while (n > 0) {
+            s += n % 2
+            n /= 2
+        }
+    }
+    val s2 = s.reversed()
+    println(s2)
+}
