@@ -187,3 +187,17 @@ class Truck(override val name:String,override val speed:Int,override val capacit
 }
 
 
+fun main(){
+    val taxi1=Taxi("taxi1",150,4)
+    val taxi2=Taxi("taxi2",100,5)
+    val bus1=Bus("bus1",120,30)
+    val bus2=Bus("bus2",110,35)
+    val van1=Van("van1",130,10)
+    val van2=Van("van2",135,8)
+    val ambulance1=Ambulance("ambulance1",70,3)
+    val truck1=Truck("truck1",75,2)
+    val truck2=Truck("truck2",85,2)
+    val sportCar1=SportCar("sportCar1",180,4)
+
+    val listOfCars=arrayListOf(taxi1,taxi2,bus1,bus2,van1,van2,ambulance1,truck2,truck1,sportCar1)
+}
