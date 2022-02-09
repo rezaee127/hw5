@@ -1,13 +1,21 @@
-class Generic<T>(var t1:T,var t2:T):Comparator<T> {
-    override fun compare(t1: T, t2: T): Int {
-        return (t1.toString()).compareTo(t2.toString())
-    }
 
+class Generic<T>(var t1:T,var t2:T)/*:Comparator<T>*/{
+    /*    override fun compare(t1: T, t2: T): Int {
+            return (t1.toString()).compareTo(t2.toString())
+        }
+        fun compare():T{
+            if (compare(t1,t2)>0)
+                return  t1
+            else
+                return t2
+        }
+    */
     fun compare():T{
-        if (compare(t1,t2)>0)
+        if (t1.toString()>t2.toString())
             return  t1
         else
             return t2
+
     }
 }
 
