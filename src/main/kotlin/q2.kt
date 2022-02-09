@@ -27,11 +27,29 @@ fun main() {
     val clerk1 = Clerk("Sama", 26, 110.0)
     val manager2 = Manager("Reza", 42, 120.0)
     val manager3 = Manager("Farhad", 34, 120.0)
-    val listOfEmployee = arrayOf(manager1, clerk1, manager2, manager3)
+    val listOfEmployees = arrayOf(manager1, clerk1, manager2, manager3)
 
     val listOfHours = arrayOf(140.0, 150.0, 130.0, 180.0)
-}
+    println("list of employee")
+    var totalPayment=0.0
+    for (i in listOfEmployees.indices){
+        println(listOfEmployees[i])
+        totalPayment +=listOfEmployees[i].salary(listOfHours[i])
+    }
+    println("\nTotal payment is $totalPayment $\n")
 
+    val customer1=Customer("Sara",22,Gender.Female)
+    val customer2=Customer("Maryam",30,Gender.Female)
+    val customer3=Customer("Sara",22,Gender.Female)
+
+    if (customer1==customer2){
+        println("${customer1} and ${customer2} are the same\n")
+    }
+
+    val listOfManagers= arrayOf(manager1,manager2,manager3)
+    println("{${listOfManagers.maxByOrNull { it->it.age }}}  is the oldest manager")
+
+}
 
 
 
